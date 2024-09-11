@@ -4,8 +4,8 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: #9bafe8;
-    color: #fff
+    background-color: #ec505f;
+    color: black
 }
 
 nav ul {
@@ -29,7 +29,7 @@ nav ul {
 }
 
 .user img {
-    width: 30px;
+    width: 100px;
     border-radius: 90%;
     margin-left: 10px;
 }

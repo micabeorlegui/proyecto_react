@@ -13,7 +13,8 @@ const Navbar = ({user}) => {
                 <li><Link to="/ver todas">Secciones ver todas</Link></li>
             </ul>
             <ul className="user">
-                <li>PONER IMAGEN ACA</li>
+                <li>NombreUsuario</li>
+                <img src="/img/logo.jpg" alt="LogoApp"/>
             </ul>
         </>
     );

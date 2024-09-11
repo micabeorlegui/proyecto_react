@@ -4,7 +4,7 @@ import "./Footer.css"
 const Footer = () => {
     return (
         <footer>
-        <p>Proyecto realizado por Micaela Beorlegui, Tomas Castro y Jazmin Bang</p>
+        <p>Proyecto realizado por Micaela Beorlegui, Tomás Castro y Jazmin Bang</p>
         </footer>
     )
 }
