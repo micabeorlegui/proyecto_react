@@ -10,7 +10,7 @@ const Navbar = ({user}) => {
             <ul className="main-nav">
                 <li><Link to= "/">Home</Link></li>
                 <li><Link to="/favoritos">Favoritos</Link></li>
-                <li><Link to="/ver todas">Secciones ver todas</Link></li>
+                <li><Link to="/verTodas">Secciones ver todas</Link></li>
             </ul>
             <ul className="user">
                 <li>NombreUsuario</li>
