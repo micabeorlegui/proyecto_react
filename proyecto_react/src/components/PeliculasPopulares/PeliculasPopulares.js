@@ -22,8 +22,13 @@ class PeliculasPopulares extends Component{
             <>
                 <section className='cardContainer'>
                     {
-                        this.state.arrayPelicula.length > 0 ? (this.state.arrayPelicula.map((pelicula,idx)=> (<PeliPopularCard pelicula={pelicula} key={idx}/>))) : (<p>Cargando...</p>)   
-                    
+                        this.state.arrayPelicula.length > 0
+                        ? this.state.arrayPelicula
+                            .filter((pelicula, idx) => idx < 5) 
+                            .map((pelicula, idx) => (
+                                <PeliPopularCard pelicula={pelicula} key={idx} />
+                            ))
+                        : (<p>Cargando...</p>)
                     }
                 </section>
             </>

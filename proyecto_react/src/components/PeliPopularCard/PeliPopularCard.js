@@ -6,8 +6,14 @@ class PeliPopularCard extends Component{
     constructor(props){
         super(props);
         this.state={
+            verDescripcion: false
 
         }
+    }
+    verDescripcion(){
+        this.setState({
+            verDescripcion: !this.state.verDescripcion
+        })
     }
     render(){
         const {title,overview, poster_path}= this.props.pelicula
@@ -20,7 +26,7 @@ class PeliPopularCard extends Component{
                         <p> Agregar o eliminar de favoritos- hacer link</p>{/* arreglar*/}
                         {/* <Link to={`/personajes/id/${id}`}>Ver mas</Link>  arreglar*/}
                         <p>{overview} </p> {/* descripcion - hacerlo link*/}
-                        <p className='more' onClick={()=> this.verMas()}>{this.state.verMas ? "ver menos" : 'ver mas'}</p> {/* arreglar*/}
+                        <p className='more' onClick={()=> this.verMas()}>{this.state.verMas ? "Ver menos" : 'Ver más'}</p> {/* arreglar*/}
                         {this.state.verMas &&(                          
                             <section className='extra'>                 
                             <p>Origen: {origin.name} </p>               
