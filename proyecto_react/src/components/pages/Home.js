@@ -1,4 +1,5 @@
 import React from 'react';
+import PeliculasPopulares from '../PeliculasPopulares/PeliculasPopulares';
 const Home = ()=> {
     return (
         <>
@@ -10,7 +11,7 @@ const Home = ()=> {
 
             <main>
                 <h2>Peliculas mas populares</h2>
-               
+                    <PeliculasPopulares/>
                 <h2>Peliculas en cartel</h2>
             </main>
         </>
