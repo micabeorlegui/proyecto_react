@@ -1,9 +1,9 @@
 import React from "react";
 import { Component } from "react";
-import PeliPopularCard from "../PeliPopularCard/PeliPopularCard";
-import './PeliculasPopulares.css'
+import './PeliculasRecomendadas.css'
+import PeliRecomendadaCard from "../PeliRecomendadaCard/PeliRecomendadaCard";
 
-class PeliculasPopulares extends Component{
+class PeliculasRecomendadas extends Component{
     constructor(){
         super();
         this.state={
@@ -11,12 +11,12 @@ class PeliculasPopulares extends Component{
         }
     }
     componentDidMount( ) {
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7')
+        fetch('https://api.themoviedb.org/3/discover/movie?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7')
             .then( response => response.json() )
             .then( data => this.setState({arrayPelicula:data.results}))
             .catch( error => console.log('El error fue: ' + error))
     }
-
+     /* hacer el fetch aca*/
     render(){
         return(
             <>
@@ -26,7 +26,7 @@ class PeliculasPopulares extends Component{
                         ? this.state.arrayPelicula
                             .filter((pelicula, idx) => idx < 5) 
                             .map((pelicula, idx) => (
-                                <PeliPopularCard pelicula={pelicula} key={idx} />
+                                <PeliRecomendadaCard pelicula={pelicula} key={idx} />
                             ))
                         : (<p>Cargando...</p>)
                     }
@@ -35,4 +35,4 @@ class PeliculasPopulares extends Component{
         )
     }
 }
-export default PeliculasPopulares;
+export default PeliculasRecomendadas;

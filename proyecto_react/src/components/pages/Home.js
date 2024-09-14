@@ -1,5 +1,6 @@
 import React from 'react';
 import PeliculasPopulares from '../PeliculasPopulares/PeliculasPopulares';
+import PeliculasRecomendadas from '../PeliculasRecomendadas/PeliculasRecomendadas';
 const Home = ()=> {
     return (
         <>
@@ -12,7 +13,8 @@ const Home = ()=> {
             <main>
                 <h2>Peliculas mas populares</h2>
                     <PeliculasPopulares/>
-                <h2>Peliculas recomentadas</h2>
+                <h2>Peliculas recomendadas</h2>
+                    <PeliculasRecomendadas/>
             </main>
         </>
     )

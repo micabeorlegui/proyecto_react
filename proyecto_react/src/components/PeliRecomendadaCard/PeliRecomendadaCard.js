@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component } from "react";
-import "./PeliPopularCard.css"
+import "./PeliRecomendadaCard.css"
 
-class PeliPopularCard extends Component{
+class PeliRecomendadaCard extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -34,4 +34,4 @@ class PeliPopularCard extends Component{
         )
     }
 }
-export default PeliPopularCard
+export default PeliRecomendadaCard 
