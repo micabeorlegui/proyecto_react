@@ -12,7 +12,7 @@ const Home = ()=> {
             <main>
                 <h2>Peliculas mas populares</h2>
                     <PeliculasPopulares/>
-                <h2>Peliculas en cartel</h2>
+                <h2>Peliculas recomentadas</h2>
             </main>
         </>
     )

@@ -22,17 +22,14 @@ class PeliPopularCard extends Component{
                 <article className='character-card'>
                         <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title} />
                         <h2> {title}</h2> {/* Nombre */}
-                        <p> Ir a detalle - hacer link</p>{/* arreglar*/}
-                        <p> Agregar o eliminar de favoritos- hacer link</p>{/* arreglar*/}
-                        {/* <Link to={`/personajes/id/${id}`}>Ver mas</Link>  arreglar*/}
-                        <p>{overview} </p> {/* descripcion - hacerlo link*/}
-                        <p className='more' onClick={()=> this.verMas()}>{this.state.verMas ? "Ver menos" : 'Ver más'}</p> {/* arreglar*/}
-                        {this.state.verMas &&(                          
+                        <p>{overview} </p> 
+                        <p className='more' onClick={()=> this.verDescripcion()}>{this.state.verDescripcion ? "Ver menos" : 'Ver descripción'}</p> 
+                        {this.state.verDescripcion &&(                          
                             <section className='extra'>                 
-                            <p>Origen: {origin.name} </p>               
+                            <p>Descripción: {overview} </p>               
                             </section>                              
                         )}
-                        <p className='delete'>Borrar</p>
+                        <p className='delete'>Ver mas</p>
                     </article>
             </>
         )

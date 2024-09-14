@@ -23,12 +23,12 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
     margin: 2px 0;
 }
 .more{
-    color: blue;
-    text-align: right;
+    color: red;
+    text-align: center;
 }
 .delete {
     color: red;
-    text-align: right;
+    text-align: center;
 }
 .more:hover,
 .delete:hover {
