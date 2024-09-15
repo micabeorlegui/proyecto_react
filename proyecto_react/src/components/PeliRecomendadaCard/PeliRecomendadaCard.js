@@ -21,7 +21,7 @@ class PeliRecomendadaCard extends Component{
             <>
                 <article className='character-card'>
                         <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title} />
-                        <h2> {title}</h2> {/* Nombre */} 
+                        <h2>{title}</h2> 
                         <p className='more' onClick={()=> this.verDescripcion()}>{this.state.verDescripcion ? "Ver menos" : 'Ver descripción'}</p> 
                         {this.state.verDescripcion &&(                          
                             <section className='extra'>                 

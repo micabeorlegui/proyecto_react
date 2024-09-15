@@ -24,10 +24,6 @@ nav ul {
     align-items: center;
 }
 
-.main-nav li:first-child {
-    font-weight: bold;
-}
-
 .user img {
     width: 100px;
     border-radius: 90%;
@@ -38,7 +34,12 @@ h1,h2 {
     font-weight: 400;
 }
 
-h1,
-main {
+h1,main {
     padding: 0 30px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el input y el botón */
 }

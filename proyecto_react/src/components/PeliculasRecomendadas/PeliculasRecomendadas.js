@@ -16,7 +16,7 @@ class PeliculasRecomendadas extends Component{
             .then( data => this.setState({arrayPelicula:data.results}))
             .catch( error => console.log('El error fue: ' + error))
     }
-     /* hacer el fetch aca*/
+     
     render(){
         return(
             <>

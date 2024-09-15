@@ -12,6 +12,10 @@ const Navbar = ({user}) => {
                 <li><Link to="/favoritos">Favoritos</Link></li>
                 <li><Link to="/verTodas">Ver todas</Link></li>
             </ul>
+            <form action="/searchResult" method="get">
+                <input type="text" name="query" placeholder="Buscar..." />
+                <button type="submit">Buscar</button>
+            </form>
             <ul className="user">
                 <li>NombreUsuario</li>
                 <img src="/img/logo.jpg" alt="LogoApp"/>

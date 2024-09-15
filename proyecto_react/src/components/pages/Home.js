@@ -5,10 +5,6 @@ const Home = ()=> {
     return (
         <>
             <h2>Bienvenido a Watch Now!</h2>
-            <form action="/searchResult" method="get">
-                <input type="text" name="query" placeholder="Buscar..." required/>
-                <button type="submit">Buscar</button>
-            </form>
 
             <main>
                 <h2>Películas más populares</h2>
