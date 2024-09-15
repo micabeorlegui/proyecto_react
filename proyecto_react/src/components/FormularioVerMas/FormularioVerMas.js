@@ -13,12 +13,15 @@ class FormularioVerMas extends Component {
         event.preventDefault();
     }
 
+    controlarCambios(event){
+        this.setState({valor: event.target.value})
+    }
+
     render() {
         return(
             <form onSubmit={(event)=>this.evitarSubmit(event)}>
-                <label>Filtrar:</label>
-                <input type='text' value={this.state.valor} onChange={''}/>
-                <input type='submit' value=''/>
+                <input type='text' onChange={(event)=> this.event.controlarCambios(event)} value={this.state.valor}/>
+                <input type='submit' value="Filtrar"/>
             </form>
         );
     }

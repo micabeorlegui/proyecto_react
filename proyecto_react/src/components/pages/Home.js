@@ -11,9 +11,9 @@ const Home = ()=> {
             </form>
 
             <main>
-                <h2>Peliculas mas populares</h2>
+                <h2>Películas más populares</h2>
                     <PeliculasPopulares/>
-                <h2>Peliculas recomendadas</h2>
+                <h2>Películas recomendadas</h2>
                     <PeliculasRecomendadas/>
             </main>
         </>
