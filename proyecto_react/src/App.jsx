@@ -16,7 +16,7 @@ function App() {
         <Route path="/verTodas" exact component={VerTodas}/> 
         <Route path="/detalle" exact component={'Detalle'}/> 
         <Route path="/favoritos" exact component={'Favoritos'}/> 
-        <Route path="/searchResult" exact component={'SearchResult'}/> 
+        <Route path="/search" exact component={'SearchResult'}/> 
         <Route component={NotFound}/>
       </Switch>
       <Footer/>
