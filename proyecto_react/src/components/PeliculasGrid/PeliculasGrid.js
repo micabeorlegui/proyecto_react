@@ -1,22 +1,22 @@
 import React from "react";
 import { Component } from "react";
-import './PeliculasRecomendadas.css'
-import PeliRecomendadaCard from "../PeliRecomendadaCard/PeliRecomendadaCard";
+import './PeliculasGrid.css'
+import Card from "../Card/Card";
 
-class PeliculasRecomendadas extends Component{
-    constructor(){
-        super();
+class PeliculasGrid extends Component{
+    constructor(props){
+        super(props);
         this.state={
             arrayPelicula:[]
         }
     }
     componentDidMount( ) {
-        fetch('https://api.themoviedb.org/3/discover/movie?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7')
+        fetch(this.props.url)
             .then( response => response.json() )
             .then( data => this.setState({arrayPelicula:data.results}))
             .catch( error => console.log('El error fue: ' + error))
     }
-     
+
     render(){
         return(
             <>
@@ -26,7 +26,7 @@ class PeliculasRecomendadas extends Component{
                         ? this.state.arrayPelicula
                             .filter((pelicula, idx) => idx < 5) 
                             .map((pelicula, idx) => (
-                                <PeliRecomendadaCard pelicula={pelicula} key={idx} />
+                                <Card pelicula={pelicula} key={idx} />
                             ))
                         : (<p>Cargando...</p>)
                     }
@@ -35,4 +35,4 @@ class PeliculasRecomendadas extends Component{
         )
     }
 }
-export default PeliculasRecomendadas;
+export default PeliculasGrid;
