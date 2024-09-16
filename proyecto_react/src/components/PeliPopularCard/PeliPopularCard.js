@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from "react";
 import "./PeliPopularCard.css"
+import { Link } from 'react-router-dom';
 
 class PeliPopularCard extends Component{
     constructor(props){
@@ -28,7 +29,7 @@ class PeliPopularCard extends Component{
                             <p>Descripción: {overview} </p>               
                             </section>                              
                         )}
-                        <p className='delete'>Ver mas</p>
+                        <Link to="/detalle">Ir a detalle</Link>
                     </article>
             </>
         )
