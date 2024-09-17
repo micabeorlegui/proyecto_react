@@ -15,11 +15,11 @@ function App() {
       <Switch>
         {/* {Cuando cada uno cree su componente y lo exporte, saque las comillas en component} */}
         <Route path="/" exact component={Home}/> 
-        <Route path="/detalle" exact component={'Detalle'}/> 
-        <Route path="/favoritos" exact component={'Favoritos'}/> 
-        <Route path="/search" exact component={SearchResults}/> 
-        <Route path="/populares" exact component={PeliculasPopulares}/> 
-        <Route path="/recomendadas" exact component={PeliculasRecomendadas}/> 
+        <Route path="/detalle" component={'Detalle'}/> 
+        <Route path="/favoritos" component={'Favoritos'}/> 
+        <Route path="/search" component={SearchResults}/> 
+        <Route path="/populares" component={PeliculasPopulares}/> 
+        <Route path="/recomendadas" component={PeliculasRecomendadas}/> 
         <Route component={NotFound}/>
       </Switch>
       <Footer/>

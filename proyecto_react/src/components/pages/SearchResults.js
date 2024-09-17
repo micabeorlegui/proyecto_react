@@ -25,12 +25,13 @@ class SearchResults extends Component{
     render(){
         return(
             <>
+                <p>{this.props.location.state.query}</p>
                 {this.state.isLoding ? (
                     <PeliculasGrid arrayPelicula={this.state.arrayPelicula}/>
                 ) : (
                     <p>Cargando...</p>
                 )
-            }
+                }
             </>
         )
     }

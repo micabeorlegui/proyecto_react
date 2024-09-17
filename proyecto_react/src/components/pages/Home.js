@@ -13,7 +13,7 @@ class Home extends Component{
     render(){
         return (
             <>
-                <FormularioSearch history={this.props.history}/>
+                <FormularioSearch ruta="/search" history={this.props.history} funcion="Buscar"/>
                 <h2>Bienvenido a Watch Now!</h2>
                 <main>
                     <h2>Películas más populares</h2>
