@@ -18,7 +18,7 @@ class FormularioSearch extends Component {
     }
 
     handleFormSubmit(){
-        this.props.history.push('/search', {query:this.state.query})
+        this.props.history.push("/search", {query:this.state.query})
     }
 
     render() {

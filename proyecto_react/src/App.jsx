@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import Home from "./components/pages/Home";
 import PeliculasPopulares from "./components/pages/PeliculasPopulares";
 import PeliculasRecomendadas from "./components/pages/PeliculasRecomendadas";
+import SearchResults from "./components/pages/SearchResults";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" exact component={Home}/> 
         <Route path="/detalle" exact component={'Detalle'}/> 
         <Route path="/favoritos" exact component={'Favoritos'}/> 
-        <Route path="/search" exact component={'SearchResult'}/> 
+        <Route path="/search" exact component={SearchResults}/> 
         <Route path="/populares" exact component={PeliculasPopulares}/> 
         <Route path="/recomendadas" exact component={PeliculasRecomendadas}/> 
         <Route component={NotFound}/>
