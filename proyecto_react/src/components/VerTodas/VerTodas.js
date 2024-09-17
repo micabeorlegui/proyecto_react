@@ -22,12 +22,10 @@ class VerTodas extends Component{
             <>
                 <section className='cardContainer'>
                     {
-                        this.state.arrayPelicula.length > 0
-                        ? this.state.arrayPelicula
+                        this.state.arrayPelicula
                             .map((pelicula, idx) => (
                                 <Card pelicula={pelicula} key={idx} />
                             ))
-                        : (<p>Cargando...</p>)
                     }
                 </section>
             </>

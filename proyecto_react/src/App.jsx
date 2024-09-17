@@ -17,8 +17,8 @@ function App() {
         <Route path="/detalle" exact component={'Detalle'}/> 
         <Route path="/favoritos" exact component={'Favoritos'}/> 
         <Route path="/search" exact component={'SearchResult'}/> 
-        <Route path="/peliculasPopulares" exact component={PeliculasPopulares}/> 
-        <Route path="/peliculasRecomendadas" exact component={PeliculasRecomendadas}/> 
+        <Route path="/populares" exact component={PeliculasPopulares}/> 
+        <Route path="/recomendadas" exact component={PeliculasRecomendadas}/> 
         <Route component={NotFound}/>
       </Switch>
       <Footer/>
