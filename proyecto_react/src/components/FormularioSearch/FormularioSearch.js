@@ -18,7 +18,7 @@ class FormularioSearch extends Component {
     }
 
     handleFormSubmit(){
-        this.props.history.push(this.props.ruta, {query:this.state.query})
+        this.props.history.push("/search", {query:this.state.query})
     }
 
     render() {
@@ -26,7 +26,7 @@ class FormularioSearch extends Component {
             <div>
                 <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
                     <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query}/>
-                    <button onClick={()=> this.handleFormSubmit()}> {this.props.funcion} </button>
+                    <button onClick={()=> this.handleFormSubmit()}>Buscar</button>
                 </form>
             </div>
         );
