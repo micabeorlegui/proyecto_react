@@ -14,7 +14,7 @@ class FormularioFiltrar extends Component {
     };
 
     handleCambiosInput(event){
-        this.setState({valorInput: event.target.value})
+        this.setState({valorInput: event.target.value},()=> this.props.handleFilterChange(this.state.valorInput))
     }
 
     render() {

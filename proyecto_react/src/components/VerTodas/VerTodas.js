@@ -18,10 +18,10 @@ class VerTodas extends Component{
             .catch( error => console.log('El error fue: ' + error))
     }
 
-    handleFilterChange(){
-        // let peliculasFiltradas = this.state.backup.filter((movie)=> movie.title.toLowerCase().includes(titulo.toLowerCase));
+    handleFilterChange(titulo){
+        let peliculasFiltradas = this.state.backup.filter((movie)=> movie.title.toLowerCase().includes(titulo.toLowerCase));
         this.setState({
-            arrayPelicula: 'peliculasFiltradas' //cambiar, hay algo a corregir
+            arrayPelicula: peliculasFiltradas 
         })
     }
 
