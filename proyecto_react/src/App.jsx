@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import Home from "./components/pages/Home";
 import PeliculasPopulares from "./components/pages/PeliculasPopulares";
 import PeliculasRecomendadas from "./components/pages/PeliculasRecomendadas";
+import SearchResults from "./components/pages/SearchResults";
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
       <Switch>
         {/* {Cuando cada uno cree su componente y lo exporte, saque las comillas en component} */}
         <Route path="/" exact component={Home}/> 
-        <Route path="/detalle" exact component={'Detalle'}/> 
-        <Route path="/favoritos" exact component={'Favoritos'}/> 
-        <Route path="/search" exact component={'SearchResult'}/> 
-        <Route path="/peliculasPopulares" exact component={PeliculasPopulares}/> 
-        <Route path="/peliculasRecomendadas" exact component={PeliculasRecomendadas}/> 
+        <Route path="/detalle" component={'Detalle'}/> 
+        <Route path="/favoritos" component={'Favoritos'}/> 
+        <Route path="/search" component={SearchResults}/> 
+        <Route path="/populares" component={PeliculasPopulares}/> 
+        <Route path="/recomendadas" component={PeliculasRecomendadas}/> 
         <Route component={NotFound}/>
       </Switch>
       <Footer/>

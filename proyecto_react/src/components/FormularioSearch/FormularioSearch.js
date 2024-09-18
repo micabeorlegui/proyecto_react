@@ -5,28 +5,28 @@ class FormularioSearch extends Component {
     constructor(props){
         super(props);
         this.state={
-            query: ''
+            query: ""
         };
     }
 
     handleEvitarSubmit(event){
-        event.preventDefault();
-    }
+        event.preventDefault()
+    };
 
     handleCambios(event){
         this.setState({query: event.target.value})
     }
 
     handleFormSubmit(){
-        this.props.history.push('/search', {query:this.state.query})
+        this.props.history.push("/search", {query:this.state.query})
     }
 
     render() {
         return(
             <div>
                 <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
-                    <input type='text' name='query' onChange={(event)=> this.event.handleCambios(event)} value={this.state.query}/>
-                    <button onClick={()=> this.handleFormSubmit()}> Buscar </button>
+                    <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query}/>
+                    <button onClick={()=> this.handleFormSubmit()}>Buscar</button>
                 </form>
             </div>
         );
