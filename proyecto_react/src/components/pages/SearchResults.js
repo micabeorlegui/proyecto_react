@@ -28,7 +28,7 @@ class SearchResults extends Component{
                 <h2>Resultados de búsqueda: {this.props.location.state.query}</h2>
                 
                 {this.state.isLoding ? (
-                    <PeliculasGrid arrayPelicula={this.state.arrayPelicula}/>
+                    <PeliculasGrid arrayPelicula={this.state.arrayPelicula} url={`https://api.themoviedb.org/3/search/movie?query=${this.props.location.state.query}&api_key=d4da6f83d8fa5dad990cafe88cb4fbf7`}/>
                 ) : (
                     <p>Cargando...</p>
                 )
