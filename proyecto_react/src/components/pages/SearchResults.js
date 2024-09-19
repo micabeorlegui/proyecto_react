@@ -33,6 +33,7 @@ class SearchResults extends Component{
                     <p>Cargando...</p>
                 )
                 }
+
             </>
         )
     }
