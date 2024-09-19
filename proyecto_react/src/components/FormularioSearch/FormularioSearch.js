@@ -23,12 +23,10 @@ class FormularioSearch extends Component {
 
     render() {
         return(
-            <div>
-                <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
-                    <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query}/>
-                    <button onClick={()=> this.handleFormSubmit()}>Buscar</button>
-                </form>
-            </div>
+            <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
+                <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query}/>
+                <button onClick={()=> this.handleFormSubmit()}>Buscar</button>
+            </form>
         );
     }
 

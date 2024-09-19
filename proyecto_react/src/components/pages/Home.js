@@ -13,9 +13,9 @@ class Home extends Component{
     render(){
         return (
             <>
-                <FormularioSearch history={this.props.history}/>
                 <h2>Bienvenido a Watch Now!</h2>
                 <main>
+                    <FormularioSearch history={this.props.history}/>
                     <h2>Películas más populares</h2>
                     <PeliculasGrid url={'https://api.themoviedb.org/3/movie/top_rated?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7'}/>
                     <h2>Películas recomendadas</h2>

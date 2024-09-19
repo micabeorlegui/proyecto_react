@@ -2,19 +2,24 @@ import React from "react";
 import { Component } from "react";
 import './VerTodas.css'
 import Card from "../Card/Card";
-import FormularioFiltrar from "../FormularioFiltrar/FormularioFiltrar";
 
 class VerTodas extends Component{
     constructor(props){
         super(props);
         this.state={
-            arrayPelicula:[]
+            arrayPelicula:[],
+            backup:[],
+            isLoading:true
         }
     }
     componentDidMount( ) {
+        this.setState({
+            isLoading: true
+        })
+
         fetch(this.props.url)
             .then( response => response.json() )
-            .then( data => this.setState({arrayPelicula:data.results, backup:data.results}))
+            .then( data => this.setState({arrayPelicula:data.results, backup:data.results, isLoading: false}))
             .catch( error => console.log('El error fue: ' + error))
     }
 
@@ -29,7 +34,6 @@ class VerTodas extends Component{
         return(
             <>
                 <section className='cardContainer'>
-                    <FormularioFiltrar handleFilterChange={(titulo)=> this.handleFilterChange(titulo)}/>
                     {this.state.arrayPelicula.length === 0 ? (<p>Cargando...</p>
                     ) : (this.state.arrayPelicula
                         .map((pelicula, idx) => (

@@ -19,11 +19,9 @@ class FormularioFiltrar extends Component {
 
     render() {
         return(
-            <div>
-                <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
-                    <input type='text' name='filtro' onChange={(event)=> this.handleCambiosInput(event)} value={this.state.valorInput} placeholder="Filtrar..."/>
-                </form>
-            </div>
+            <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
+                <input type='text' name='filtro' onChange={(event)=> this.handleCambiosInput(event)} value={this.state.valorInput} placeholder="Filtrar..."/>
+            </form>
         );
     }
 
