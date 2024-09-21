@@ -1,0 +1,36 @@
+.main-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.movie-detail {
+    color: #777;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 300px; 
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 3px 15px rgba(58, 59, 69, 0.15); 
+    text-align: center;
+}
+
+.movie-detail img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.movie-detail:hover,
+.active {
+    box-shadow: 0px 0px 10px 5px rgba(58, 59, 69, 0.25); 
+}
+
+.movie-detail p {
+    margin: 3px 0;
+}
+
+.movie-detail h2 {
+    margin: 2px 0;
+}
