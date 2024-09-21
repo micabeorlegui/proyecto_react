@@ -9,7 +9,9 @@ class VerTodas extends Component{
         this.state={
             arrayPelicula:[],
             backup:[],
-            isLoading:true
+            isLoading:true,
+            peliculasCargadas: 0, //contador de peliculas que se cargaron
+            limit:10 // el limite de peliculas que se deben cargar cada vez que hacen click
         }
     }
     componentDidMount( ) {
@@ -19,7 +21,7 @@ class VerTodas extends Component{
 
         fetch(this.props.url)
             .then( response => response.json() )
-            .then( data => this.setState({arrayPelicula:data.results, backup:data.results, isLoading: false}))
+            .then( data => this.setState({ backup:data.results,arrayPelicula: data.results.slice(0, this.state.limit),peliculasCargadas: this.state.limit,  isLoading: false}))
             .catch( error => console.log('El error fue: ' + error))
     }
 
@@ -27,6 +29,15 @@ class VerTodas extends Component{
         let peliculasFiltradas = this.state.backup.filter((movie)=> movie.title.toLowerCase().includes(titulo.toLowerCase));
         this.setState({
             arrayPelicula: peliculasFiltradas 
+        })
+    }
+    cargarMas(){
+        const peliculasCargadasActualizado = this.state.peliculasCargadas + this.state.limit;
+        const nuevasPeliculas = this.state.backup.filter((_, index) => index < peliculasCargadasActualizado );
+        this.setState({
+            arrayPelicula: nuevasPeliculas, //aca actualizo el array de peliculas ya cargadas
+            peliculasCargadas: nuevasPeliculas.length //aca actualizo el contador
+
         })
     }
 
@@ -40,6 +51,7 @@ class VerTodas extends Component{
                             <Card pelicula={pelicula} key={idx} />
                         )))
                     }
+                     {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
                 </section>
             </>
         )
