@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import VerTodas from '../VerTodas/VerTodas';
 import FormularioFiltrar from '../FormularioFiltrar/FormularioFiltrar';
+import { Link } from "react-router-dom";
 
 
 class PeliculasPopulares extends Component{
