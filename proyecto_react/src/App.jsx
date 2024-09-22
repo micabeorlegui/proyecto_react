@@ -16,7 +16,7 @@ function App() {
       <Switch>
         {/* {Cuando cada uno cree su componente y lo exporte, saque las comillas en component} */}
         <Route path="/" exact component={Home}/> 
-        <Route path="/detalle" component={Detalle}/> 
+        <Route path="/detalle/id/:id" component={Detalle}/> 
         <Route path="/favoritos" component={'Favoritos'}/> 
         <Route path="/search" component={SearchResults}/> 
         <Route path="/populares" component={PeliculasPopulares}/> 

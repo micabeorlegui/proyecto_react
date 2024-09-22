@@ -21,7 +21,7 @@ class Card extends Component{
     
 
     render(){
-        const {title,overview, poster_path}= this.props.pelicula
+        const {title,overview, poster_path, id}= this.props.pelicula
         return(
             <>
                 <article className='character-card'>
@@ -34,7 +34,7 @@ class Card extends Component{
                             </section>                              
                         )}
                         <div className="button-container">
-                            <Link to="/detalle">Ir a detalle</Link>
+                            <Link to={`./detalle/id/${id}`}>Ir a detalle</Link>
                             <button>Agregar a favoritos</button>
                         </div>
                         
