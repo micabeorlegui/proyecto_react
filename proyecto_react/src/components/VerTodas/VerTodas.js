@@ -9,19 +9,14 @@ class VerTodas extends Component{
         this.state={
             arrayPelicula:[],
             backup:[],
-            isLoading:true,
             peliculasCargadas: 0, //contador de peliculas que se cargaron
             limit:10 // el limite de peliculas que se deben cargar cada vez que hacen click
         }
     }
     componentDidMount( ) {
-        this.setState({
-            isLoading: true
-        })
-
         fetch(this.props.url)
             .then( response => response.json() )
-            .then( data => this.setState({ backup:data.results,arrayPelicula: data.results.slice(0, this.state.limit),peliculasCargadas: this.state.limit,  isLoading: false}))
+            .then( data => this.setState({ backup:data.results,arrayPelicula: data.results.slice(0, this.state.limit),peliculasCargadas: this.state.limit}))
             .catch( error => console.log('El error fue: ' + error))
     }
 
@@ -45,13 +40,15 @@ class VerTodas extends Component{
         return(
             <>
                 <section className='cardContainer'>
+                    
                     {this.state.arrayPelicula.length === 0 ? (<p>Cargando...</p>
                     ) : (this.state.arrayPelicula
                         .map((pelicula, idx) => (
                             <Card pelicula={pelicula} key={idx} />
                         )))
                     }
-                     {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
+                    
+                    {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
                 </section>
             </>
         )
