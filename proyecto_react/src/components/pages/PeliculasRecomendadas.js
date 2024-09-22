@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import VerTodas from '../VerTodas/VerTodas';
-import FormularioFiltrar from '../FormularioFiltrar/FormularioFiltrar';
-
 
 class PeliculasRecomendadas extends Component{
     constructor(props){
