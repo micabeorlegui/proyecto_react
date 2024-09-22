@@ -15,7 +15,6 @@ class PeliculasRecomendadas extends Component{
         return (
             <>
                 <h2>Todas las películas recomendadas</h2>
-                <FormularioFiltrar handleFilterChange={(titulo)=> this.handleFilterChange(titulo)}/>
                 <main>
                     <VerTodas url={'https://api.themoviedb.org/3/discover/movie?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7'}/>
                 </main>

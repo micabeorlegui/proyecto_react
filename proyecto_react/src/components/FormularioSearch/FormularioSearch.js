@@ -10,8 +10,8 @@ class FormularioSearch extends Component {
     }
 
     handleEvitarSubmit(event){
-        event.preventDefault()
-    };
+        event.preventDefault();
+    }
 
     handleCambios(event){
         this.setState({query: event.target.value})

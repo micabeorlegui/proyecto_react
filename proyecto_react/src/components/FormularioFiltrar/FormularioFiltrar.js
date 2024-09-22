@@ -10,8 +10,8 @@ class FormularioFiltrar extends Component {
     }
 
     handleEvitarSubmit(event){
-        event.preventDefault()
-    };
+        event.preventDefault();
+    }
 
     handleCambiosInput(event){
         this.setState({valorInput: event.target.value},()=> this.props.handleFilterChange(this.state.valorInput))
