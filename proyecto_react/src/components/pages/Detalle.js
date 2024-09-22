@@ -2,13 +2,12 @@ import React from 'react';
 import PeliculaDetail from "../PeliculaDetail/PeliculaDetail"
 
 const Detalle = (props) => {
-  return (
-    <main className="main-detail">
-      <article className="movie-detail">
-        <p>Una vez terminado el componente se continua</p>
-      </article>
-    </main>
-  );
+    const { id } = props.match.params;
+    return (
+        <>
+            <PeliculaDetail id={id} />
+        </>
+    );
 };
 
 export default Detalle;
