@@ -9,3 +9,19 @@ h2{
     color:  #ec505f;
 }
 
+.verTodasLink{
+    display: block;
+    color:#ec505f;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 15%;
+    margin: 20px auto;
+}
+
+.verTodasLink:hover {
+    text-decoration: underline;
+    color: black;
+}

@@ -69,9 +69,10 @@ class VerTodas extends Component{
                                     <Card pelicula={pelicula} key={idx} />
                                 ))
                         )}
-                        <div className="cargarMasContainer"></div>
+                        <div className="cargarMasContainer">
                             {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
-                        <div/>
+                        </div>
+                       
                     </section>
 
                 )}

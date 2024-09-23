@@ -20,10 +20,10 @@ class Home extends Component{
                     <FormularioSearch className="formularioSearch" history={this.props.history} />
                     <h2>Películas más populares</h2>
                     <PeliculasGrid url={'https://api.themoviedb.org/3/movie/top_rated?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7'}/>
-                    <Link to="/populares" className='Link'>Ver todas</Link>
+                    <Link to="/populares" className='verTodasLink'>Ver todas</Link>
                     <h2>Películas recomendadas</h2>
                     <PeliculasGrid url={'https://api.themoviedb.org/3/discover/movie?api_key=d4da6f83d8fa5dad990cafe88cb4fbf7'}/>
-                    <Link to="/recomendadas"className='Link'>Ver todas</Link>
+                    <Link to="/recomendadas"className='verTodasLink'>Ver todas</Link>
                 </main>
             </>
         )

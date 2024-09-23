@@ -34,7 +34,7 @@ class Card extends Component{
                             </section>                              
                         )}
                         <div className="button-container">
-                            <Link to={`./detalle/id/${id}`}>Ir a detalle</Link>
+                            <Link className="detalle-link" to={`./detalle/id/${id}`}>Ir a detalle</Link>
                             <button>Agregar a favoritos</button>
                         </div>
                         
