@@ -1,0 +1,35 @@
+.search-results {
+    padding: 20px;
+}
+
+.noHay{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.volverHome{
+    display: block;
+    color:#ec505f;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 15%;
+    margin: 20px ;
+    margin-top: 30px;
+}
+
+.volverHome:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.giphy-embed{
+    margin: 20px ;
+}
+
+.intentalo{
+    margin: 20px;
+    color: gray;
+}

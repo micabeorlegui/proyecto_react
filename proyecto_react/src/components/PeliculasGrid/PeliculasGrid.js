@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import './PeliculasGrid.css'
 import Card from "../Card/Card";
+import Loader from "../Loader/Loader";
 
 class PeliculasGrid extends Component{
     constructor(props){
@@ -34,7 +35,7 @@ class PeliculasGrid extends Component{
                             <Card pelicula={pelicula} key={idx} />
                         ))
                     ):(
-                        <p>Cargando...</p>
+                        <Loader/>
                     )}
                     
                 </section>

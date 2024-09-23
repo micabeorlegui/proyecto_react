@@ -3,6 +3,7 @@ import { Component } from "react";
 import './VerTodas.css'
 import Card from "../Card/Card";
 import FormularioFiltrar from "../FormularioFiltrar/FormularioFiltrar";
+import Loader from "../Loader/Loader";
 
 class VerTodas extends Component{
     constructor(props){
@@ -55,10 +56,10 @@ class VerTodas extends Component{
     render(){
         return(
             <>
-                <FormularioFiltrar handleFilterChange={(title)=> this.handleFilterChange(title)}/>
+                <FormularioFiltrar handleFilterChange={(title)=> this.handleFilterChange(title)} className="formularioFiltrar"/>
 
                 {this.state.isLoading ? (
-                    <p>Cargando...</p>
+                    <Loader/>
                 ):(
                     <section className='cardContainer'>
                         {this.state.arrayPelicula.length === 0 ? (

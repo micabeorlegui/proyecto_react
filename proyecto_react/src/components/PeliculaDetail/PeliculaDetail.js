@@ -1,6 +1,7 @@
 import React from "react";
 import "./PeliculaDetail.css";
 import { Component } from "react";
+import Loader from "../Loader/Loader";
 
 class PeliculaDetail extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class PeliculaDetail extends Component {
     render() {
         const { movie } = this.state;
         if (!movie) {
-            return <p>Cargando...</p>;
+            return <Loader/>;
         }
         const { title, overview, poster_path, genres, release_date, vote_average, runtime } = movie;
         return (
