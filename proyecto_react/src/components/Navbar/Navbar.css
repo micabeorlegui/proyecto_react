@@ -18,14 +18,16 @@ nav ul {
 .main-nav li,
 .user li {
     margin: 0 10px;
+    margin-right: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    color: azure;
 }
 
 .user img {
-    width: 100px;
+    width: 130px;
     border-radius: 90%;
     margin-left: 10px;
 }
@@ -38,8 +40,3 @@ h1,main {
     padding: 0 30px;
 }
 
-form {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre el input y el botón */
-}

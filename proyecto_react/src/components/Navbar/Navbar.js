@@ -10,11 +10,11 @@ const Navbar = ({user}) => {
             <ul className="main-nav">
                 <li><Link to= "/">Home</Link></li>
                 <li><Link to="/favoritos">Favoritos</Link></li>
-                <li><Link to="/populares">Peliculas Populares</Link></li>
-                <li><Link to="/recomendadas">Peliculas Recomendadas</Link></li>
+                <li><Link to="/populares">Populares</Link></li>
+                <li><Link to="/recomendadas">Recomendadas</Link></li>
             </ul>
             <ul className="user">
-                <li>JuanRamirez</li>
+                <li> Usuario </li>
                 <img src="/img/logo.jpg" alt="LogoApp"/>
             </ul>
         </>
