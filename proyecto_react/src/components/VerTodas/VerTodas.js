@@ -61,8 +61,9 @@ class VerTodas extends Component{
                         .map((pelicula, idx) => (
                             <Card pelicula={pelicula} key={idx} />
                         ))}
+                    {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
                 </section>
-                {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
+                
                     
             </>
         )
