@@ -21,10 +21,14 @@
 }
 
 .cargarMasContainer {
-    width: 100%; 
+    width: 10%; 
+    height: 10%;
     display: flex;
     justify-content: center; 
+    align-items: center;
     position: relative; 
-    margin-top: 20px;
-    background-color: #ec505f; 
+    margin: 20px;
+    color:#ec505f;
+    border: none;
+    border-radius: 5px;
 }
