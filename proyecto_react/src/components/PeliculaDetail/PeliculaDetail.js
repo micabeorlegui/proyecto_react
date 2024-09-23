@@ -2,6 +2,7 @@ import React from "react";
 import "./PeliculaDetail.css";
 import { Component } from "react";
 import Loader from "../Loader/Loader";
+import Favorito from "../Favorito/Favorito";
 
 class PeliculaDetail extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class PeliculaDetail extends Component {
         if (!movie) {
             return <Loader/>;
         }
-        const { title, overview, poster_path, genres, release_date, vote_average, runtime } = movie;
+        const { title, overview, poster_path, genres, release_date, vote_average, runtime, id } = movie;
         return (
             <main className="main-detail">
                 <article className="movie-detail">
@@ -37,6 +38,7 @@ class PeliculaDetail extends Component {
                     <p>Fecha de estreno: {release_date}</p>
                     <p>Duración: {runtime} minutos</p>
                     <p>Sinópsis: {overview}</p>
+                    <Favorito id={id} />
                 </article>
             </main>
         );
