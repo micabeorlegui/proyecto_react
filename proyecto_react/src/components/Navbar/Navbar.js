@@ -14,7 +14,7 @@ const Navbar = ({user}) => {
                 <li><Link to="/recomendadas">Peliculas Recomendadas</Link></li>
             </ul>
             <ul className="user">
-                <li>NombreUsuario</li>
+                <li>JuanRamirez</li>
                 <img src="/img/logo.jpg" alt="LogoApp"/>
             </ul>
         </>

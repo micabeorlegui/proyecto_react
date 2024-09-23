@@ -22,7 +22,11 @@ class VerTodas extends Component{
 
         fetch(this.props.url)
             .then( response => response.json() )
-            .then( data => this.setState({ backup:data.results,arrayPelicula: data.results.slice(0, this.state.limit),peliculasCargadas: this.state.limit, isLoading:false}))
+            .then( data => {
+                const backup = data.results;
+                const arrayPelicula = backup.filter((_, index) => index < this.state.limit);
+                this.setState({backup, arrayPelicula,peliculasCargadas: this.state.limit,  isLoading: false})
+            })
             .catch( error => console.log('El error fue: ' + error))
     }
 
