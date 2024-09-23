@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import "./FormularioSearch.css"
 
 class FormularioSearch extends Component {
     constructor(props){
@@ -23,10 +24,12 @@ class FormularioSearch extends Component {
 
     render() {
         return(
-            <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
-                <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query}/>
-                <button onClick={()=> this.handleFormSubmit()}>Buscar</button>
-            </form>
+            <div className="container">
+                <form onSubmit={(event)=>this.handleEvitarSubmit(event)}>
+                    <input type='text' name='query' onChange={(event)=> this.handleCambios(event)} value={this.state.query} placeholder="Bucar..."/>
+                    <button onClick={()=> this.handleFormSubmit()}><i className="fas fa-search"></i></button>
+                </form>
+            </div>
         );
     }
 

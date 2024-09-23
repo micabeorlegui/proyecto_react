@@ -56,15 +56,26 @@ class VerTodas extends Component{
         return(
             <>
                 <FormularioFiltrar handleFilterChange={(title)=> this.handleFilterChange(title)}/>
-                <section className='cardContainer'>
-                    {this.state.arrayPelicula
-                        .map((pelicula, idx) => (
-                            <Card pelicula={pelicula} key={idx} />
-                        ))}
-                    {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
-                </section>
-                
-                    
+
+                {this.state.isLoading ? (
+                    <p>Cargando...</p>
+                ):(
+                    <section className='cardContainer'>
+                        {this.state.arrayPelicula.length === 0 ? (
+                            <h2>¡¡No hay coincidencias!!</h2>
+                        ) : (
+                            this.state.arrayPelicula
+                                .map((pelicula, idx) => (
+                                    <Card pelicula={pelicula} key={idx} />
+                                ))
+                        )}
+                        <div className="cargarMasContainer"></div>
+                            {this.state.arrayPelicula.length < this.state.backup.length && ( <button onClick={() => this.cargarMas()}>Cargar más</button>)} 
+                        <div/>
+                    </section>
+
+                )}
+                     
             </>
         )
     }
