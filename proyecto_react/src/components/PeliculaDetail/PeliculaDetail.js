@@ -27,7 +27,7 @@ class PeliculaDetail extends Component {
         if (!movie) {
             return <Loader/>;
         }
-        const { title, overview, poster_path, genres, release_date, vote_average, runtime, id } = movie;
+        const { title, overview, poster_path, genres, release_date, vote_average, runtime, id} = movie;
         return (
             <main className="main-detail">
                 <article className="movie-detail">

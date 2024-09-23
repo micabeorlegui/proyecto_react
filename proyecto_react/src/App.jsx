@@ -8,6 +8,7 @@ import Detalle from "./components/pages/Detalle"
 import PeliculasPopulares from "./components/pages/PeliculasPopulares";
 import PeliculasRecomendadas from "./components/pages/PeliculasRecomendadas";
 import SearchResults from "./components/pages/SearchResults";
+import Favoritos from "./components/pages/Favoritos"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {/* {Cuando cada uno cree su componente y lo exporte, saque las comillas en component} */}
         <Route path="/" exact component={Home}/> 
         <Route path="/detalle/id/:id" component={Detalle}/> 
-        <Route path="/favoritos" component={'Favoritos'}/> 
+        <Route path="/favoritos" component={Favoritos}/> 
         <Route path="/search" component={SearchResults}/> 
         <Route path="/populares" component={PeliculasPopulares}/> 
         <Route path="/recomendadas" component={PeliculasRecomendadas}/> 
