@@ -9,33 +9,33 @@
 .movie-detail {
     color: #333;
     font-size: 16px;
-    max-width: 400px; /* Ahora es un poco más angosto */
+    max-width: 400px; 
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin: 10px;
-    text-align: center; /* Cambié a 'center' para que el texto esté centrado */
+    text-align: center; 
 }
 
 .movie-detail img {
-    width: 100%; /* La imagen ocupará el 100% del contenedor */
-    max-width: 300px; /* Limitar el ancho máximo de la imagen */
+    width: 100%; 
+    max-width: 300px; 
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .movie-detail h2 {
-    font-size: 22px; /* Título un poco más grande */
+    font-size: 22px; 
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .movie-detail p {
-    margin: 10px 0; /* Espaciado entre párrafos */
-    color: #555; /* Color de texto un poco más suave */
+    margin: 10px 0; 
+    color: #555; 
 }
 
 .movie-detail p strong {
-    color: #1e90ff; /* Color azul para resaltar detalles importantes */
+    color: #1e90ff;
 }

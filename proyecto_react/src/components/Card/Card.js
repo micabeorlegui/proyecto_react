@@ -2,13 +2,13 @@ import React from 'react';
 import { Component } from "react";
 import "./Card.css"
 import { Link } from 'react-router-dom';
+import Favorito from '../Favorito/Favorito';
 
 class Card extends Component{
     constructor(props){
         super(props);
         this.state={
             verDescripcion: false,
-            esFavorito: false,
             movies: [] 
 
         }
@@ -18,8 +18,6 @@ class Card extends Component{
             verDescripcion: !this.state.verDescripcion
         })
     }
-    
-
     render(){
         const {title,overview, poster_path, id}= this.props.pelicula
         return(
@@ -35,7 +33,7 @@ class Card extends Component{
                         )}
                         <div className="button-container">
                             <Link className="detalle-link" to={`./detalle/id/${id}`}>Ir a detalle</Link>
-                            <button>Agregar a favoritos</button>
+                            <Favorito id= {id}/>
                         </div>
                         
                     </article>

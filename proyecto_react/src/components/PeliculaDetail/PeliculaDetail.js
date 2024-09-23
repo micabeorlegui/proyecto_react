@@ -21,7 +21,6 @@ class PeliculaDetail extends Component {
                 });
             });
     }
-    
     render() {
         const { movie } = this.state;
         if (!movie) {
